@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<heard>
+<meta charset="UTF-8">
+    <title> Palitra </title>
+
+</heard>
+
+<div id = "container"></div>
+<scripe type ="text/babel" >
+
+    class CityName extends React.Component{
+           constructor(props){
+               super(props)
+                this.state = {
+                    city: '', date_start: '', date_finish: '',cityName:'PITER'}
+            }
+                this.sityValue = this.sityValue.bind(this);
+                this.setNewCity = this.setNewCity.bind(this);
+
+                sityValue (e) {
+                    this.setState({city: e.target.value})
+                };
+                setNewCity (e) {
+                    this.setState({city: this.state.city})
+                    this.setState({cityName:this.state.city})
+                };
+               e.preventDefault();
+
+                render() {
+                    return(
+                        <div className='cityName'>
+                         <form onSubmit={this.setNewCity} >
+                         <input onChange={this.sityValue} plaseholder="Name city"></input>
+                         <button type="submit">Ok</button>
+                         </form>
+                       </div>
+                );
+                }
+        }
+
+   ReactDOM.render(
+    <div>
+       <CityName />
+     </div>,
+   document.querySelector("container"));
+        </scripe>
+    </html>
+    <html>
+
